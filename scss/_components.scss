@@ -1,0 +1,158 @@
+  // BUTTON
+.btn {
+  border: none;
+  outline: none;
+  padding: 8px 24px;
+  background-color: $primary;
+  color: $white;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 20px;
+  &__primary-rounded {
+    border-radius: 28px;
+    padding: 12px 40px;
+  }
+  &__primary {
+    border-radius: 10px;
+    padding: 16px 40px;
+  }
+}
+
+// MOBILE NAV
+.mobile {
+  position: absolute;
+  top: 96px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  &__inner {
+    background-color: $purple-dark;
+    border-radius: 10px;
+    padding: 40px 24px;
+  }
+  &__links {
+    margin-bottom: 30px;
+    text-align: center;
+    a {
+      color: $white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+  &__separator {
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+    margin-bottom: 30px;
+  }
+  button {
+    width: 100%;
+    display: block;
+  }
+}
+
+// URL FORM
+.shortener-form {
+  background-color: $purple-dark;
+  border-radius: 10px;
+  padding: 24px;
+  position: relative;
+  margin-bottom: -80px;
+  .shortener__inner {
+    background-color: #3A3054;
+    background-image: url(./../../images/bg-boost-mobile.svg);
+    background-size: cover;
+  }
+  .url-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    input[type="text"] {
+      border: none;
+      border: 1px solid #979797;
+      border-radius: 5px;
+      font-family: inherit;
+      font-size: 16px;
+      height: 48px;
+      line-height: 36px;
+      letter-spacing: 0.12px;
+      margin-bottom: 16px;
+      padding: 16px;
+      display: block;
+      width: 100%;
+    }
+    .js-input-error {
+      display: none;
+      color: #F46363;
+      font-style: italic;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.08px;
+      position: relative;
+      top: -12px;
+    }
+  }
+  .shortener__btn {
+    border-radius: 5px;
+    height: 48px;
+    padding: 0;
+  }
+}
+
+// FEATURE CARDS
+.feature-card {
+  background-color: $white;
+  border-radius: 5px;
+  padding: 77px 32px 40px;
+  text-align: center;
+  margin-bottom: 92px;
+  position: relative;
+  z-index: 2;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    background-color: #2BD0D0;
+    height: 80px;
+    z-index: 1;
+    transform: translate(-4px, 40px);
+  }
+  &:last-child {
+    margin-bottom: 0;
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+    }
+  }
+  .icon-wrapper {
+    display: grid;
+    place-items: center;
+    background-color: $purple-dark;
+    border-radius: 50%;
+    height: 88px;
+    width: 88px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  h3 {
+    color: $black;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  p {
+    color: $grey-dark;
+    font-size: 15px;
+    line-height: 26px;
+    text-align: center;
+  }
+}
+

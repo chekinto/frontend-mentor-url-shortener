@@ -1,0 +1,30 @@
+.hero {
+  position: relative;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 88px;
+  }
+  &__illustration {
+    margin-bottom: 60px;
+    z-index: 4;
+  }
+  &__illustration-bg {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    top: -50px;
+  }
+  &__content {
+    h1 {
+      margin-bottom: 15px;
+    }
+    p {
+      margin-bottom: 32px;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

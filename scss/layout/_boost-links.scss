@@ -1,0 +1,17 @@
+.boost {
+  background-color: #3A3054;
+  background-image: url(./../../images/bg-boost-mobile.svg);
+  background-size: cover;
+  padding: 90px 36px;
+  text-align: center;
+  &__inner {
+    h3 {
+      color: $white;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 48px;
+      letter-spacing: -0.7px;
+      margin-bottom: 16px;
+    }
+  }
+}

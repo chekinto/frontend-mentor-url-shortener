@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #232127;
+  padding: 56px 0 54px;
+  &__logo {
+    filter: invert(1);
+    margin: 0 auto 50px;
+    display: block;
+  }
+
+  &__nav {
+    margin-bottom: 40px;
+    h4 {
+      color: $white;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: -0.25px;
+      text-align: center;
+      margin-bottom: 22px;
+    }
+    li {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+  &__links {
+    color: #BFBFBF;
+    font-size: 15px;
+    letter-spacing: -0.23px;
+    text-align: center;
+  }
+  &__icons {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+  }
+}
