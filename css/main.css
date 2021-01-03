@@ -72,13 +72,17 @@ a {
   color: #FFFFFF;
   font-family: inherit;
   font-weight: bold;
-  font-size: 20px; }
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in; }
   .btn__primary-rounded {
     border-radius: 28px;
     padding: 12px 40px; }
   .btn__primary {
     border-radius: 10px;
     padding: 16px 40px; }
+  .btn:hover {
+    background-color: #9AE3E3; }
 
 .mobile {
   position: absolute;
@@ -114,16 +118,29 @@ a {
   padding: 24px;
   position: relative;
   margin-bottom: -80px; }
+  @media (min-width: 768px) {
+    .shortener-form {
+      padding: 52px 64px; } }
   .shortener-form .shortener__inner {
     background-color: #3A3054;
     background-image: url(./../../images/bg-boost-mobile.svg);
     background-size: cover; }
   .shortener-form .url-form {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center;
+    background-color: #3A3054; }
+    @media (min-width: 768px) {
+      .shortener-form .url-form {
+        flex-direction: row;
+        gap: 24px; } }
   .shortener-form .form-control {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
+    @media (min-width: 768px) {
+      .shortener-form .form-control {
+        flex: 1; } }
     .shortener-form .form-control input[type="text"] {
       border: none;
       border: 1px solid #979797;
@@ -137,6 +154,10 @@ a {
       padding: 16px;
       display: block;
       width: 100%; }
+      @media (min-width: 768px) {
+        .shortener-form .form-control input[type="text"] {
+          margin-bottom: 0;
+          height: auto; } }
     .shortener-form .form-control .js-input-error {
       display: none;
       color: #F46363;
@@ -150,8 +171,19 @@ a {
     border-radius: 5px;
     height: 48px;
     padding: 0; }
+    @media (min-width: 768px) {
+      .shortener-form .shortener__btn {
+        padding: 18px 40px;
+        height: auto; } }
 
-.feature-card {
+@media (min-width: 1200px) {
+  .feature-card__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 72px; } }
+
+.feature-card__wrapper .feature-card {
   background-color: #FFFFFF;
   border-radius: 5px;
   padding: 77px 32px 40px;
@@ -159,21 +191,34 @@ a {
   margin-bottom: 92px;
   position: relative;
   z-index: 2; }
-  .feature-card::after {
+  @media (min-width: 768px) {
+    .feature-card__wrapper .feature-card {
+      width: 350px;
+      margin: 0 auto 92px; } }
+  @media (min-width: 1200px) {
+    .feature-card__wrapper .feature-card {
+      margin: 0 auto; } }
+  @media (min-width: 1200px) {
+    .feature-card__wrapper .feature-card:nth-child(2) {
+      transform: translateY(44px); } }
+  @media (min-width: 1200px) {
+    .feature-card__wrapper .feature-card:nth-child(3) {
+      transform: translateY(88px); } }
+  .feature-card__wrapper .feature-card:first-child::after {
     content: '';
     position: absolute;
     width: 8px;
     background-color: #2BD0D0;
-    height: 80px;
+    height: 500px;
     z-index: 1;
     transform: translate(-4px, 40px); }
-  .feature-card:last-child {
-    margin-bottom: 0; }
-    .feature-card:last-child::after {
-      content: '';
-      width: 0;
-      height: 0; }
-  .feature-card .icon-wrapper {
+    @media (min-width: 1200px) {
+      .feature-card__wrapper .feature-card:first-child::after {
+        right: -254px;
+        transform: rotate(90deg);
+        top: -90px;
+        z-index: -40; } }
+  .feature-card__wrapper .feature-card .icon-wrapper {
     display: grid;
     place-items: center;
     background-color: #3A3054;
@@ -184,16 +229,25 @@ a {
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%); }
-  .feature-card h3 {
+    @media (min-width: 1200px) {
+      .feature-card__wrapper .feature-card .icon-wrapper {
+        left: 72px; } }
+  .feature-card__wrapper .feature-card h3 {
     color: #34313D;
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 12px; }
-  .feature-card p {
+    @media (min-width: 1200px) {
+      .feature-card__wrapper .feature-card h3 {
+        text-align: left; } }
+  .feature-card__wrapper .feature-card p {
     color: #9E9AA8;
     font-size: 15px;
     line-height: 26px;
     text-align: center; }
+    @media (min-width: 1200px) {
+      .feature-card__wrapper .feature-card p {
+        text-align: left; } }
 
 .header {
   margin-bottom: 68px; }
@@ -203,11 +257,17 @@ a {
     align-items: center;
     padding-top: 40px; }
   .header__logo {
-    color: #34313D; }
+    color: #34313D;
+    margin-right: 45px;
+    width: 120px;
+    height: 32px; }
   .header .burger__menu {
     display: flex;
     justify-content: center;
     cursor: pointer; }
+    @media (min-width: 768px) {
+      .header .burger__menu {
+        display: none; } }
     .header .burger__menu .line {
       background-color: #9E9AA8;
       height: 3px;
@@ -224,6 +284,38 @@ a {
         top: -8px; }
       .header .burger__menu .line::after {
         top: 8px; }
+  .header__desktop {
+    display: flex;
+    align-items: center;
+    flex: 1; }
+    @media (max-width: 768px) {
+      .header__desktop {
+        display: none; } }
+    .header__desktop ul {
+      display: flex;
+      color: inherit; }
+      .header__desktop ul:first-of-type {
+        margin-right: auto; }
+  .header__desktop-nav li a {
+    color: #9E9AA8;
+    margin-right: 28px;
+    transition: 0.2s ease-in; }
+    .header__desktop-nav li a:hover {
+      color: #34313D; }
+  .header__desktop-cta {
+    display: flex;
+    align-items: center; }
+    .header__desktop-cta a {
+      color: #9E9AA8;
+      transition: 0.2s ease-in; }
+      .header__desktop-cta a:hover {
+        color: #34313D; }
+    .header__desktop-cta button {
+      font-size: 15px;
+      margin-left: 38px;
+      width: 105px;
+      height: 40px;
+      padding: 0; }
 
 .hero {
   position: relative; }
@@ -231,6 +323,10 @@ a {
     display: flex;
     flex-direction: column;
     margin-bottom: 88px; }
+    @media (min-width: 1200px) {
+      .hero__inner {
+        flex-direction: row;
+        justify-content: start; } }
   .hero__illustration {
     margin-bottom: 60px;
     z-index: 4; }
@@ -246,12 +342,37 @@ a {
   .hero__content button {
     display: block;
     margin: 0 auto; }
+  @media (min-width: 768px) {
+    .hero__content h1 {
+      text-align: center;
+      font-size: 64px; }
+    .hero__content p {
+      text-align: center;
+      width: 540px;
+      margin: 0 auto 38px; } }
+  @media (min-width: 1200px) {
+    .hero__content h1 {
+      text-align: left;
+      width: 565px; }
+    .hero__content p {
+      text-align: left;
+      width: 540px; }
+    .hero__content button {
+      display: initial; } }
 
 .statistics {
   background-color: #f2f2f2;
   padding: 160px 0 80px; }
   .statistics__content {
     margin-bottom: 92px; }
+    @media (min-width: 768px) {
+      .statistics__content {
+        text-align: center; }
+        .statistics__content h2 {
+          margin-bottom: 18px; }
+        .statistics__content p {
+          width: 540px;
+          margin: 0 auto; } }
 
 .boost {
   background-color: #3A3054;
@@ -268,17 +389,29 @@ a {
     margin-bottom: 16px; }
 
 .footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background-color: #232127;
   padding: 56px 0 54px; }
+  @media (min-width: 768px) {
+    .footer__inner {
+      display: flex;
+      justify-content: flex-start;
+      gap: 30px; } }
   .footer__logo {
     filter: invert(1);
     margin: 0 auto 50px;
     display: block; }
+    @media (min-width: 768px) {
+      .footer__logo {
+        margin: 0 auto 0 0;
+        height: 32px;
+        width: 120px; } }
   .footer__nav {
     margin-bottom: 40px; }
+    @media (min-width: 768px) {
+      .footer__nav {
+        text-align: left;
+        padding-right: 32px;
+        min-width: 102px; } }
     .footer__nav h4 {
       color: #FFFFFF;
       font-size: 16px;
@@ -286,9 +419,15 @@ a {
       letter-spacing: -0.25px;
       text-align: center;
       margin-bottom: 22px; }
+      @media (min-width: 768px) {
+        .footer__nav h4 {
+          text-align: left; } }
     .footer__nav li {
       text-align: center;
       margin-bottom: 10px; }
+      @media (min-width: 768px) {
+        .footer__nav li {
+          text-align: left; } }
   .footer__links {
     color: #BFBFBF;
     font-size: 15px;
@@ -298,3 +437,5 @@ a {
     display: flex;
     gap: 24px;
     justify-content: center; }
+  .footer__nav-list {
+    min-width: 103px; }

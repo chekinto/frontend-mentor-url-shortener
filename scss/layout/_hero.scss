@@ -4,6 +4,10 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 88px;
+    @media(min-width: $desktop) {
+      flex-direction: row;
+      justify-content: start;
+    }
   }
   &__illustration {
     margin-bottom: 60px;
@@ -25,6 +29,30 @@
     button {
       display: block;
       margin: 0 auto;
+    }
+    @media(min-width: $tablet) {
+      h1 {
+        text-align: center;
+        font-size: 64px;
+      }
+      p {
+        text-align: center;
+        width: 540px;
+        margin: 0 auto 38px;
+      }
+    }
+    @media(min-width: $desktop) {
+      h1 {
+        text-align: left;
+        width: 565px;
+      }
+      p {
+        text-align: left;
+        width: 540px;
+      }
+      button {
+        display: initial;
+      }
     }
   }
 }

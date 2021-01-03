@@ -8,11 +8,17 @@
   }
   &__logo {
     color: $black;
+    margin-right: 45px;
+    width: 120px;
+    height: 32px;
   }
   .burger__menu {
     display: flex;
     justify-content: center;
     cursor: pointer;
+    @media(min-width: $tablet) {
+      display: none;
+    }
     .line {
       background-color:$grey-dark;
       height: 3px;
@@ -32,6 +38,51 @@
       &::after {
         top: 8px;
       }
+    }
+  }
+  &__desktop {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    @media(max-width: $tablet) {
+      display: none;
+    }
+    ul {
+      display: flex;
+      color: inherit;
+      &:first-of-type {
+        margin-right: auto;
+      }
+    }
+  }
+  &__desktop-nav {
+    li {
+      a {
+        color: $grey-dark;
+        margin-right: 28px;
+        transition: 0.2s ease-in;
+         &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+  &__desktop-cta {
+    display: flex;
+    align-items: center;
+    a {
+      color: $grey-dark;
+      transition: 0.2s ease-in;
+      &:hover {
+        color: $black;
+      }
+    }
+    button {
+      font-size: 15px;
+      margin-left: 38px;
+      width: 105px;
+      height: 40px;
+      padding: 0;
     }
   }
 }
